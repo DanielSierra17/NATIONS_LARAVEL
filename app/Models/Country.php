@@ -25,7 +25,7 @@ class Country extends Model
         // Tabla Pibote
         // Foreing key of current model
         // Foreing key of related model
-        return $this->belongsToMany(Language::class, 'country_languages', 'country_id', 'language_id');
+        return $this->belongsToMany(Language::class, 'country_languages', 'country_id', 'language_id')->withPivot('official');
     }
 
     // M:1 country - region

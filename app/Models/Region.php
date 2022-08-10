@@ -20,7 +20,7 @@ class Region extends Model
 
     // 1 ... M Region - Country
     // Relationship
-    public function countries() {
+    public function paises() {
 
         return $this->hasMany(Country::class , 'region_id');
     }
